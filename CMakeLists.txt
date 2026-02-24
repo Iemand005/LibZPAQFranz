@@ -7,6 +7,19 @@ add_library(LibZPAQFranz STATIC
     src/ZPAQWriter.cpp
 )
 
+if(MSVC)
+  # include_directories(
+  #   external/pthread-win32
+  # )
+  add_subdirectory(external/pthread-win32)
+  target_link_libraries(LibZPAQFranz PRIVATE pthread)
+  target_include_directories(LibZPAQFranz PRIVATE external/pthread-win32)
+
+  add_subdirectory(external/unistd_h)
+  target_link_libraries(LibZPAQFranz PRIVATE unistd_h)
+  target_include_directories(LibZPAQFranz PRIVATE external/unistd_h)
+endif()
+
 target_include_directories(LibZPAQFranz PUBLIC 
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
     $<INSTALL_INTERFACE:include>

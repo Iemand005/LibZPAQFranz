@@ -1,5 +1,4 @@
 #include "../zpaqfranz/zpaqfranz.cpp"
 
-class ZPAQReader {
+#include "../include/ZPAQReader.hpp"
 
-};

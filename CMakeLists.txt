@@ -15,8 +15,6 @@ if(MSVC)
   target_link_libraries(LibZPAQFranz PRIVATE pthread)
   target_include_directories(LibZPAQFranz PRIVATE external/pthread-win32)
 
-  add_subdirectory(external/unistd_h)
-  target_link_libraries(LibZPAQFranz PRIVATE unistd_h)
   target_include_directories(LibZPAQFranz PRIVATE external/unistd_h)
 endif()
 

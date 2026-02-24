@@ -4,3 +4,9 @@
 [submodule "external/pthread-win32"]
 	path = external/pthread-win32
 	url = https://github.com/Iemand005/pthread-win32.git
+[submodule "external/libunistd"]
+	path = external/libunistd
+	url = https://github.com/robinrowe/libunistd.git
+[submodule "external/unistd_h"]
+	path = external/unistd_h
+	url = https://github.com/Iemand005/unistd_h.git
